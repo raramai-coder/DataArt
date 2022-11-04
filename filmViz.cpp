@@ -4,6 +4,12 @@
 #include <string>
 #include <vector>
 #include <sstream>
+// #include <windows.h>
+#include <stdlib.h>   
+#include <stdio.h>
+#include <time.h>
+#include <unistd.h>
+#include <dos.h>
 
 using namespace std;
 
@@ -78,31 +84,41 @@ public:
 
     void compareRatings()
     {
+        cout << "============================================================================================================= " << endl;
+        
         if (originalRating > remakeRating)
         {
-            cout << title << ": " << endl;
-
+            cout << title << endl;
+            sleep(1.5);
+            
             cout << "Original: " << originalRating << " "
                  << "Remake: " << this->remakeRating << endl;
-
+            sleep(3);
             cout << "The original was better" << endl;
             cout << endl;
+            sleep(2);
         }
         else if (originalRating < remakeRating)
         {
-            cout << title << ": " << endl;
+            cout << title << endl;
+             sleep(1.5);
             cout << "Original: " << originalRating << " "
                  << "Remake: " << remakeRating << endl;
+                  sleep(3);
             cout << "The remake was better" << endl;
             cout << endl;
+            sleep(2);
         }
         else
         {
-            cout << title << ": " << endl;
+            cout << title  << endl;
+            sleep(1.5);
             cout << "Original: " << originalRating << " "
                  << "Remake: " << remakeRating << endl;
+            sleep(3);     
             cout << "They were the same but still" << endl;
             cout << endl;
+            sleep(2);
         }
     }
 };
